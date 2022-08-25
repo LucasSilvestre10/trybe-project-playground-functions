@@ -86,7 +86,7 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(palavra) {
   let result = palavra.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
-   return result;
+  return result;
 }
 function decode(palavra) {
   let result = palavra.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
@@ -94,8 +94,19 @@ function decode(palavra) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let objeto = [];
+  let ordenado = array.sort();
+  if (ordenado.length > 0) {
+    for (let index = 0; index < ordenado.length; index += 1) {
+      objeto.push({
+        tech: ordenado[index],
+        name,
+      });
+    }
+    return objeto;
+  }
+  return 'Vazio!';
 }
 
 module.exports = {
